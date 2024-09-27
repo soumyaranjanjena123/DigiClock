@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme">
+        <button id="themeChange">ChangeTheme</button>
+        <div class="themeImages">
+            <img src="pexels-kelly-rabie-787427-1878095.jpg" alt="theme2">
+            <img src="pexels-skitterphoto-411011.jpg" alt="theme2">
+            <img src="pexels-photograph-994883.jpg" alt="">
+        </div>
+    </div>
+    
+
+
+    <div class="clockContainer">
+        <div class="region">
+            <select name="region" id="region">
+                <option value="asia">Asia</option>
+                <option value="africa">Africa</option>
+                <option value="europe">Europe</option>
+                <option value="us">US</option>
+                <option value="uk">UK</option>
+            </select>
+        </div>
+    <div id="mainClock">
+        <div id="clock">00:00:00</div>
+        <button id="voice" onclick="speakTime()">Time🎙️</button>
+    </div>
+    </div>
+
+    <div class="alarmSec">
+        <h3>Alram</h3>
+        <div class="alramBtns">
+            <button id="alarm">Alram</button>
+            <button id="addAlram">+</button>
+            <div class="setAlram">
+                <select name="ampm" id="ampm">
+                        <option value="AM">Am</option>
+                        <option value="PM">Pm</option>
+                </select>
+            </div>
+            <button id="alarmStop" onclick="stopAlarm()">Stop</button>
+
+        </div>
+        <div id="alarmTimeDisplay"></div>
+
+
+    </div>
+
+    <div class="stopwatchContainer">
+        <h3>StopWatch</h3>
+        <div id="stopWatch">00:00:00</div>
+        <button id="startStopW">Start</button>
+        <button id="pauseStopW">Pause</button>
+        <button id="watchReset">Reset</button>
+        <button id="stopStopW">Stop</button>
+    </div>
+
+
+    <div class="reminderContainer">
+        <h3>Reminder</h3>
+        <input type="date" id="reminderDate" placeholder="Slect Date">
+        <input type="time" id="reminderTime" placeholder="Select Time">
+        <input type="text" id="reminderCause" placeholder="Enter reminder cause">
+        <button id="setReminderBtn" onclick="reminder()">Set Reminder</button>
+        
+
+        <div class="remiderList">
+            <h4>Your Reminder</h4>
+            <ul id="reminderList">
+
+             </ul>
+         </div>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

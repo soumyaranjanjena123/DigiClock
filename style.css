@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    height: 100vh;
+    margin: 0;
+    background-image: url(pexels-kelly-rabie-787427-1878095.jpg);
+
+    transition: background 0.5s ease-in-out;
+}
+
+.clockContainer {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    /* align-items: center; */
+    justify-content: center;
+
+
+}
+#region{
+    list-style: none;
+}
+
+#mainClock{
+    display: flex;
+    gap: 20px;
+}
+#mainClock button{
+    padding: 10px 20px;
+}
+
+
+#clock {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.theme button{
+    position: relative;
+    left: 80%;
+}
+
+.alarmSec{
+    position: relative;
+    /* border: 1px solid; */
+    width: 300px;
+    margin: 0px 30px;
+
+    top: 10%;
+
+}
+
+.stopwatchContainer{
+    /* border: 1px solid; */
+    position: relative;
+    left: 75%;
+    bottom: 10%;
+    width: 300px;
+
+
+}
+.stopwatchContainer h3{
+    font-size: 30px;
+}
+
+#stopWatch{
+    font-size: 20px;
+    color: brown;
+    padding: 30px 0;
+
+
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: blueviolet;
+    border-radius: 10px;
+}
+
+.region select, .setAlram select {
+    padding: 5px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.alarmSec, .stopwatch {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.alramBtns, .stopwatch button {
+    margin: 10px 0;
+}
+
+.themeImages img{
+    display: none;
+}
+
+.reminderContainer{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+    position: relative;
+    left: 600px;
+    bottom: 400px;
+}
+
+.reminderContainer input{
+    padding: 10px 10px;
+    border: none;
+    border-radius:10px ;
+    
+    
+
+}
+
+
