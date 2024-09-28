@@ -37,13 +37,18 @@
     <div class="alarmSec">
         <h3>Alram</h3>
         <div class="alramBtns">
-            <button id="alarm">Alram</button>
-            <button id="addAlram">+</button>
+            <button id="alarm" >Set Alram</button>
+            
             <div class="setAlram">
+                <!-- <input type="number" id="alarmHours" placeholder="HH" min="1" max="12">:
+                <input type="number" id="alarmMinutes" placeholder="MM" min="1" max="59"> -->
+
+                <input type="time" id="alarmTimeInput">
                 <select name="ampm" id="ampm">
                         <option value="AM">Am</option>
                         <option value="PM">Pm</option>
                 </select>
+                <button id="addAlram">+</button>
             </div>
             <button id="alarmStop" onclick="stopAlarm()">Stop</button>
 

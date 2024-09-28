@@ -12,7 +12,6 @@ let isStopped = false;
 
 const alarmSound = new Audio('FM9B3TC-alarm.mp3')
 
-// Function to update the clock based on the selected region
 const updateClock = (region) => {
     let now = new Date();
     
@@ -86,12 +85,49 @@ const speakTime = () => {
 };
 
 
-document.getElementById('alarm').addEventListener('click', () => {
-    const alarmHour = prompt("Enter alarm hour (HH)");
-    const alarmMinute = prompt("Enter alarm minute (MM)");
+// hideShow=()=>{
+//     const setAlramDiv = document.getElementById('setAlram')
+//     setAlramDiv.classList.toggle('hidden')
+// }
+
+// document.getElementById('alarm').addEventListener('click',hideShow())
+
+
+
+document.getElementById('addAlram').addEventListener('click', () => {
+    const timeValue = document.getElementById("alarmTimeInput").value
     const ampm = document.getElementById('ampm').value;
 
-    alarmTime = `${alarmHour.padStart(2, '0')}:${alarmMinute.padStart(2, '0')}:00 ${ampm.toUpperCase()}`;
+
+    if(!timeValue){
+        alert('Please Select a Time')
+        return;
+    }
+
+    let[hours,minutes] = timeValue.split(':')
+
+    if(ampm === "PM" && hours>12){
+        hours = hours -12
+
+    }else if(ampm ==="AM"&&hours == 12){
+        hours= '00'
+
+    }else if(ampm === "PM" && hours ==12){
+        hours = '12';
+    }
+
+
+    hours = hours.toString().padStart(2,0)
+
+    // console.log(timeValue)
+
+    // console.log(hours)
+
+
+    alarmTime =`${hours}:${minutes}:00 ${ampm.toUpperCase()}`
+
+
+    // alarmTime = `${alarmHour.padStart(2, '0')}:${alarmMinute.padStart(2, '0')}:00 ${ampm.toUpperCase()}`;
     checkAlarm();
 
     document.getElementById("alarmTimeDisplay").textContent= `Alarm set for: ${alarmTime}`
@@ -99,9 +135,10 @@ document.getElementById('alarm').addEventListener('click', () => {
 
 
 const checkAlarm = () => {
-    if (alarmTime === document.getElementById("clock").textContent) {
+    let currentTime = document.getElementById("clock").textContent
+    if (alarmTime === currentTime) {
         alarmTimeout = setTimeout(() => {
-            alert("Alarm ringing!");
+            // alert("Alarm ringing!");
             stopAlarm();
             playAlramSound()
         }, 1000);
@@ -117,7 +154,7 @@ const playAlramSound = ()=>{
 };
 
 
-// Stop the alarm
+
 const stopAlarm = () => {
     clearTimeout(alarmTimeout);
     alarmTime = null;

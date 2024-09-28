@@ -122,4 +122,100 @@ button {
 
 }
 
+#alarmTimeInput, #ampm{
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    background-color: beige;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+
+@media (max-width: 768px) {
+    .clockContainer {
+        width: 100%;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+        /* justify-items: center; */ 
+        margin: 10px auto;
+    }
+    .stopwatchContainer{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        top: 20%;
+        left: 10%;
+    }
+
+    .alarmSec{
+        width: 35%;
+        position: relative;
+        font-size: 30px;
+        right: -10%;
+
+
+    }
+
+    .reminderContainer{
+        width: 35%;
+        position: relative;
+        left: 10%;
+        top: 22%;
+    }
+
+    #voice{
+        width: 60px;
+        height: 50px;
+    }
+
+    #clock {
+        font-size: 25px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .region select, .setAlram select {
+        font-size: 14px;
+    }
+
+    .theme button {
+        left: 60%;
+    }
+    .theme button{
+        position: relative;
+        left: 90%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .clockContainer, .alarmSec, .stopwatchContainer, .reminderContainer {
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    #clock {
+        font-size: 28px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .theme button {
+        left: 50%;
+    }
+
+    .region select, .setAlram select {
+        font-size: 12px;
+    }
+}
 
