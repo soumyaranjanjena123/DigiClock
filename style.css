@@ -4,6 +4,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center; */
+    /* background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; */
     height: 100vh;
     margin: 0;
     background-image: url(pexels-kelly-rabie-787427-1878095.jpg);
@@ -133,6 +136,15 @@ button {
 
 
 @media (max-width: 768px) {
+    body{
+        height: 100vh;
+        /* background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center; */
+        
+
+
+    }
     .clockContainer {
         width: 100%;
         /* display: flex;
